@@ -94,6 +94,7 @@
 #define PRID_IMP_LOONGSON_64R	0x6100  /* Reduced Loongson-2 */
 #define PRID_IMP_LOONGSON_64C	0x6300  /* Classic Loongson-2 and Loongson-3 */
 #define PRID_IMP_LOONGSON_64G	0xc000  /* Generic Loongson-2 and Loongson-3 */
+#define PRID_IMP_LX5280		0xc600
 
 #define PRID_IMP_UNKNOWN	0xff00
 
@@ -313,6 +314,11 @@ enum cpu_type_enum {
 	CPU_TX3912, CPU_TX3922, CPU_TX3927,
 
 	/*
+	 * Lexra processors
+	 */
+	CPU_LX5280,
+
+	/*
 	 * MIPS32 class processors
 	 */
 	CPU_4KC, CPU_4KEC, CPU_4KSC, CPU_24K, CPU_34K, CPU_1004K, CPU_74K,
@@ -425,6 +431,7 @@ enum cpu_type_enum {
 #define MIPS_CPU_MM_SYSAD	BIT_ULL(58)	/* CPU supports write-through SysAD Valid merge */
 #define MIPS_CPU_MM_FULL	BIT_ULL(59)	/* CPU supports write-through full merge */
 #define MIPS_CPU_MAC_2008_ONLY	BIT_ULL(60)	/* CPU Only support MAC2008 Fused multiply-add instruction */
+#define MIPS_CPU_LX5280_CACHE	BIT_ULL(61)
 
 /*
  * CPU ASE encodings
