@@ -572,4 +572,9 @@ config LOONGSON_PCH_MSI
 	help
 	  Support for the Loongson PCH MSI Controller.
 
+config RTL8186_IRQ
+	bool
+	depends on MACH_RTL8186
+	select IRQ_DOMAIN
+
 endmenu
